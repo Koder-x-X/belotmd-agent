@@ -1,0 +1,22 @@
+{
+  "name": "belotmd-bridge",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Node bridge: authenticates to belot.md, joins a table over Colyseus, relays raw state to the Python bot.",
+  "type": "module",
+  "main": "src/belotmd/platform/bridge.js",
+  "scripts": {
+    "bridge": "node src/belotmd/platform/bridge.js",
+    "lint": "eslint src/belotmd/platform"
+  },
+  "dependencies": {
+    "colyseus.js": "^0.15.0",
+    "https-proxy-agent": "^9.1.0",
+    "socks-proxy-agent": "^10.1.0",
+    "undici": "^7.30.1",
+    "ws": "^8.21.1"
+  },
+  "devDependencies": {
+    "eslint": "^10.10.0"
+  }
+}
