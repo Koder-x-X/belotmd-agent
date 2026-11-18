@@ -1,0 +1,10 @@
+runs/
+profiles.json
+profiles.tmp
+session.json
+session.hold.json
+proxies.json
+history/
+admin.token
+*.token
+*.stop
