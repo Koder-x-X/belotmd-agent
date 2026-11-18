@@ -1,6 +1,46 @@
-# secrets stay local
+# --- Secrets -----------------------------------------------------------
+# Session cookies live here and must never be committed.
 .env
+
+# Desk accounts. Logins and passwords stay on this machine.
 desk/profiles.json
+desk/profiles.tmp
 desk/session.json
+desk/session.hold.json
 desk/proxies.json
 desk/admin.token
+desk/*.stop
+*.token
+
+# Local seat scripts. Several contain profile logins and passwords.
+tools/_*.py
+
+# Notes that name real accounts.
+docs/cleanup_delete_list_20261027_124907.md
+docs/cleanup_report_20261027_124907.md
+docs/fallen-missed-takes-lessons.json
+docs/tz_belot_account_profile.md
+
+# --- Model weights -----------------------------------------------------
+*.pt
+*.pth
+
+# --- Recorded gameplay -------------------------------------------------
+frames*.jsonl
+*.frames.jsonl
+log*.md
+data/journals/
+data/annotations/
+data/datasets/
+models/
+
+# --- Build / tooling ---------------------------------------------------
+__pycache__/
+*.py[cod]
+node_modules/
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
