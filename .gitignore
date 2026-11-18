@@ -1,0 +1,6 @@
+# secrets stay local
+.env
+desk/profiles.json
+desk/session.json
+desk/proxies.json
+desk/admin.token
