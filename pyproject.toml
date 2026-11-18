@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "belotmd"
+version = "1.1.0"
+description = "Belot.md bot SDK with strong agent, decision journal and local learning"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "Cristian" }]
+keywords = [
+    "belot", "belote", "card-game", "bot", "sdk",
+    "colyseus", "websocket", "game-ai", "imperfect-information",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Games/Entertainment :: Board Games",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+live = ["websockets>=12.0"]
+dev = ["websockets>=12.0", "pytest>=7.0"]
+train = ["torch>=2.0"]
+
+[project.urls]
+Homepage = "https://github.com/MrUnBaiat/belotmd"
+Documentation = "https://github.com/MrUnBaiat/belotmd/blob/main/docs/PLATFORM_NOTES.md"
+Issues = "https://github.com/MrUnBaiat/belotmd/issues"
+
+[project.scripts]
+belot-bot = "belotmd.cli:main"
+belot-learn = "belotmd.learning.cli_learn:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+belotmd = ["platform/bridge.js", "review/static/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
