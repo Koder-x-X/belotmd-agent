@@ -1,0 +1,12 @@
+{
+  "profiles": [
+    {
+      "login": "your-login",
+      "password": "your-password",
+      "agent": "fallen3",
+      "variant": "3",
+      "points": "101",
+      "once": false
+    }
+  ]
+}
